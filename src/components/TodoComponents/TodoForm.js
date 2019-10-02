@@ -59,6 +59,9 @@ class TodoForm extends React.Component {
       newItem: ""
     });
   };
+  // clearCompleted = () => {
+  //   this.setState({ data: this.props.data.filter(item => !item.completed) });
+  // };
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
@@ -74,6 +77,7 @@ class TodoForm extends React.Component {
             value={this.newItem}
           />
           <button type="submit">add todo</button>
+          <button onClick={this.props.clearCompleted}>Clear Completed</button>
         </form>
       </div>
     );
